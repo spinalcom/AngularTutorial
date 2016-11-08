@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Angular tutorial</title>
+    <!-- Set the base path for routing -->
+    <base href="/html/angularTuto/">
+    <!-- SpinalCore -->
+    <script type="text/javascript" src="vendor/spinalcore.browser.js"></script>
+    <!-- Import JS -->
+    <script type="text/javascript" src="vendor/angular.min.js"></script>
+    <script type="text/javascript" src="vendor/spinal-angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="tutoModel.js"></script>
+  </head>
+  <body ng-app="angularTuto" ng-controller="TutoCtrl as tuto">
+    Number stored: {{tuto.myNumber.get()}}
+    
+    <br />
+    
+    <input type="number" ng-model="newNumber" /><button ng-click="tuto.update(newNumber)">Update number</button>
+  </body>
+</html>
